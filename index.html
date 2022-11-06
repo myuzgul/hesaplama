@@ -9,7 +9,8 @@
 <body>
     
     <form action="javascript:void()">
-        <select id="mySelect" onchange="myFunction()">
+
+        <span> <b>İlçe Seçiniz</b> </span> <select id="mySelect" onchange="myFunction()">
           <option value="1" >-- İlçe Seçiniz -- </option>
           <option value="1" >Umraniye </option>
           <option value="2" >Besiktas</option>
@@ -17,7 +18,7 @@
           <option value="4">Silivri</option>
         </select>
         
-         <select id="mySelect1" onchange="myFunction1()">
+        <span> <b>Çalışan Sayınızı Seçiniz:</b> </span><select id="mySelect1" onchange="myFunction1()">
           <option value="1">-- Çalışan Sayınızı Seçiniz --</option>
           <option value="1">30-50</option>
           <option value="2">50+</option>
@@ -28,9 +29,9 @@
         <input id="textbox" type="text">
         <input id="textbox2" type="text">
   
-	    <button onclick="hesapla()">Hesapla</button>
+	    <button onclick="hesapla()">Ücreti Hesapla</button>
         <br> <br>   
-        <input id="textbox3" type="text">
+        <span> <b>Aylık Ödeme Tutarınız: </b></span><input id="textbox3" type="text">
 
 <script>
     var x = document.getElementById("mySelect");
