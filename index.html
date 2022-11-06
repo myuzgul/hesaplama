@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form action="javascript:void()">
+        <select id="mySelect" onchange="myFunction()">
+          <option value="1" >-- İlçe Seçiniz -- </option>
+          <option value="1" >Umraniye </option>
+          <option value="2" >Besiktas</option>
+          <option value="3">Kadıkoy</option>
+          <option value="4">Silivri</option>
+        </select>
+        
+         <select id="mySelect1" onchange="myFunction1()">
+          <option value="1">-- Çalışan Sayınızı Seçiniz --</option>
+          <option value="1">30-50</option>
+          <option value="2">50+</option>
+        </select>
+        <br>
+        <br>
+
+        <input id="textbox" type="text">
+        <input id="textbox2" type="text">
+  
+	    <button onclick="hesapla()">Hesapla</button>
+        <br> <br>   
+        <input id="textbox3" type="text">
+
+<script>
+    var x = document.getElementById("mySelect");
+    var y = document.getElementById("mySelect1");
+    function myFunction() {
+    var i = x.selectedIndex;  
+    textbox.value= x.options[i].text;
+}
+
+function myFunction1() {
+  var z = y.selectedIndex;
+  textbox2.value= y.options[z].text;
+ }
+
+function hesapla() {
+  
+  if (x.value == 1 && y.value == 1) {
+    textbox3.value ="3000TL"
+  }else if(x.value == 1 && y.value == 2){
+    textbox3.value ="5000TL"
+  }else if(x.value == 2 && y.value == 1){
+    textbox3.value ="4000TL"
+  }else if(x.value == 2 && y.value == 2){
+    textbox3.value ="6000TL"
+  }else if(x.value == 3 && y.value == 1){
+    textbox3.value ="5000TL"
+  }else if(x.value == 3 && y.value == 2){
+    textbox3.value ="7000TL"
+  }else if(x.value == 4 && y.value == 1){
+    textbox3.value ="5500TL"
+  }else { x.value == 4 && y.value == 2
+    textbox3.value ="6500TL"
+  }
+  
+}
+</script>
+</body>
+</html>
